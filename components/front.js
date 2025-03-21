@@ -2,11 +2,12 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import Header from './Header';
 import Footer from './Footer';
-import {useNavigation} from "@react-navigation/native";
+import {Link, useNavigation} from "@react-navigation/native";
 
 const Front = () => {
    const navigation = useNavigation();
   return (
+
     <ScrollView contentContainerStyle={styles.container}>
       <Header />
       {/* Hero Section */}
@@ -16,7 +17,7 @@ const Front = () => {
           Connect, collaborate, and contribute to global research initiatives
         </Text>
         <TouchableOpacity style={styles.neuButton}>
-          <Text style={styles.neuButtonText}>Explore Research</Text>
+          <Text style={styles.neuButtonText} onPress={ () => navigation.navigate('Recent-Publications')}>Explore Research</Text>
         </TouchableOpacity>
       </View>
 
@@ -27,11 +28,11 @@ const Front = () => {
           {/* Event 1 */}
           <View style={styles.eventCard}>
             <Text style={styles.eventIcon}>📅</Text> {/* Emoji wrapped in Text */}
-            <Text style={styles.eventTitle}>Research Symposium 2024</Text>
+            <Text style={styles.eventTitle}>Hack-cse-lerate</Text>
             <Text style={styles.eventDescription}>
-              Join us for our annual research symposium featuring keynote speakers.
+              Join us for Hackathon, an electrifying 12-hour coding marathon from 8 AM to 8 PM at the Birla Auditorium and Media Center.
             </Text>
-            <Text style={styles.eventDate}>March 15, 2024</Text>
+            <Text style={styles.eventDate}>March 29, 2025</Text>
           </View>
           {/* Event 2 */}
           <View style={styles.eventCard}>
@@ -40,46 +41,43 @@ const Front = () => {
             <Text style={styles.eventDescription}>
               Interactive workshops on research methodologies.
             </Text>
-            <Text style={styles.eventDate}>April 5, 2024</Text>
+            <Text style={styles.eventDate}>April 5, 2025</Text>
           </View>
           {/* Event 3 */}
-          <View style={styles.eventCard}>
-            <Text style={styles.eventIcon}>💻</Text> {/* Emoji wrapped in Text */}
-            <Text style={styles.eventTitle}>Virtual Conference</Text>
-            <Text style={styles.eventDescription}>
-              Global online conference connecting researchers worldwide.
-            </Text>
-            <Text style={styles.eventDate}>May 20, 2024</Text>
-          </View>
+          {/*<View style={styles.eventCard}>*/}
+          {/*  <Text style={styles.eventIcon}>💻</Text> /!* Emoji wrapped in Text *!/*/}
+          {/*  <Text style={styles.eventTitle}>Virtual Conference</Text>*/}
+          {/*  <Text style={styles.eventDescription}>*/}
+          {/*    Global online conference connecting researchers worldwide.*/}
+          {/*  </Text>*/}
+          {/*  <Text style={styles.eventDate}>May 20, 2024</Text>*/}
+          {/*</View>*/}
         </View>
       </View>
 
       {/* Publications Section */}
       <View style={styles.publicationsSection}>
-        <Text style={styles.sectionTitle}>Latest Publications</Text>
+        <Text style={styles.sectionTitle}>Recent Publications</Text>
         <View style={styles.publicationCard}>
-          <Text style={styles.publicationTitle}>Advances in Quantum Computing</Text>
-          <Text style={styles.publicationDesc}>Published in International Journal of Quantum Science</Text>
+          <Text style={styles.publicationTitle}>Comparative Analysis of Various Game Theory Algorithms for CPU and GPU Resource Allocation</Text>
+          {/*<Text style={styles.publicationDesc}>Published in International Journal of Quantum Science</Text>*/}
           <View style={styles.publicationDetails}>
-            <Text style={styles.publicationAuthors}>Authors: Dr. Sarah Chen, et al.</Text>
-            <Text style={styles.publicationYear}>2023</Text>
+            <Text style={styles.publicationAuthors}>Authors: Ujwal Pai Jakarbet, Arshan Ali Khan, Suhas S P, Savithramma R M</Text>
           </View>
+          <Text style={styles.publicationYear}>Dec 2024</Text>
         </View>
         {/* Duplicate Publication Example */}
         <View style={styles.publicationCard}>
-          <Text style={styles.publicationTitle}>Advances in Quantum Computing</Text>
-          <Text style={styles.publicationDesc}>Published in International Journal of Quantum Science</Text>
+          <Text style={styles.publicationTitle}>Machine Learning Based Public Transit Bus Arrival Time Prediction System</Text>
+          {/*<Text style={styles.publicationDesc}>Published in International Journal of Quantum Science</Text>*/}
           <View style={styles.publicationDetails}>
-            <Text style={styles.publicationAuthors}>Authors: Dr. Sarah Chen, et al.</Text>
-            <Text style={styles.publicationYear}>2023</Text>
+            <Text style={styles.publicationAuthors}>Authors: Savithramma R M, Ashwini B P, Ujwal Pai Jakarbet, Aparna B P, Suhas S P, Arshan Ali Khan</Text>
           </View>
+          <Text style={styles.publicationYear}>Dec 2024</Text>
         </View>
 
         {/* Links */}
-        <TouchableOpacity style={styles.neuButton} onPress={() => navigation.navigate('Members')}>
-          <Text style={styles.neuButtonText}>Members Publications</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.neuButton} onPress={() => navigation.navigate('')}>
+        <TouchableOpacity style={styles.neuButton} onPress={() => navigation.navigate('Recent-Publications')}>
           <Text style={styles.neuButtonText}>Recent Publications</Text>
         </TouchableOpacity>
       </View>
@@ -150,7 +148,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
-    width: '30%',
+    width: '45%',
     shadowColor: 'rgba(32, 87, 129, 0.5)',
     shadowOffset: { width: 5, height: 5 },
     shadowOpacity: 0.5,

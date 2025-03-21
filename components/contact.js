@@ -1,21 +1,28 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Linking } from 'react-native';
 
 const ContactPage = () => {
+  const handleEmailPress = () => {
+    const email = 'sitresearchgate@sit.sc.in';
+    Linking.openURL(`mailto:${email}`).catch(err => console.error('Error opening email:', err));
+  };
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.header}>Contact Us</Text>
-      <View style={styles.infoContainer}>
-        <Text style={styles.label}>Phone:</Text>
-        <Text style={styles.text}>+1 (234) 567-890</Text>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.header}>Contact Us</Text>
+        <View style={styles.infoContainer}>
+          <Text style={styles.label}>Phone:</Text>
+          <Text style={styles.text}>+91 9731636663</Text>
 
-        <Text style={styles.label}>Email:</Text>
-        <Text style={styles.text}>contact@example.com</Text>
+          <Text style={styles.label}>Email:</Text>
+          <TouchableOpacity onPress={handleEmailPress}>
+            <Text style={styles.emailText}>sitresearchgate@sit.sc.in</Text>
+          </TouchableOpacity>
 
-        <Text style={styles.label}>Address:</Text>
-        <Text style={styles.text}>123 Main Street, City, Country</Text>
-      </View>
-    </SafeAreaView>
+          <Text style={styles.label}>Address:</Text>
+          <Text style={styles.text}>Siddaganga Institute of Technology, Tumkur, 572103</Text>
+        </View>
+      </SafeAreaView>
   );
 };
 
@@ -43,15 +50,23 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   label: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 10,
     color: '#555',
   },
   text: {
-    fontSize: 14,
+    fontSize: 15,
+    fontWeight: 'bold',
     marginBottom: 15,
     color: '#777',
+  },
+  emailText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    color: '#007bff',
+    textDecorationLine: 'underline',
   },
 });
 

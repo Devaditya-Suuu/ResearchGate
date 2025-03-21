@@ -4,10 +4,11 @@ import { View, Text, Image, FlatList, StyleSheet, Linking } from 'react-native';
 const members = [
   {
     id: '1',
-    name: 'John Doe',
-    role: 'President',
-    publications: '10 Research Papers',
+    name: 'Ujwal pai',
+    role: 'Student Co-ordinator',
+    publications: '3 Publications',
     social: 'https://linkedin.com/in/johndoe',
+    viewPublication: 'https://www.researchgate.net/profile/Ujwal-Jakarbet',
       image: require('../assets/pai.jpg')
   },
   {
@@ -15,16 +16,17 @@ const members = [
     name: 'sujal',
     role: 'web lead',
     publications: '8 Research Papers',
-    social: 'https://linkedin.com/in/janesmith',
+    social: 'https://linkedin.com/in/sujalflash/',
       image: require('../assets/sujal.jpg')
 
   },
   {
     id: '3',
-    name: 'Michael Brown',
-    role: 'Treasurer',
-    publications: '5 Research Papers',
-    social: 'https://linkedin.com/in/michaelbrown',
+    name: 'Devaditya borah',
+    role: 'Member of web team',
+    // publications: '5 Research Papers',
+    social: 'https://www.linkedin.com/in/devaditya-borah-%F0%9F%87%AE%F0%9F%87%B3-65865026b/',
+    image: require('../assets/devaditya.jpeg')
 
   }
 ];
@@ -35,11 +37,11 @@ const MemberCard = ({ member }) => (
     <Text style={styles.name}>{member.name}</Text>
     <Text style={styles.role}>{member.role}</Text>
     <Text style={styles.publications}>{member.publications}</Text>
-    <Text
-      style={styles.link}
-      onPress={() => Linking.openURL(member.social)}
-    >
+    <Text style={styles.link} onPress={() => Linking.openURL(member.social)}>
       View Profile
+    </Text>
+    <Text style={styles.link} onPress={() => Linking.openURL(member.viewPublication)}>
+      View Publications
     </Text>
   </View>
 );
@@ -60,7 +62,7 @@ const MembersPage = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#a9d7ff',
     padding: 20,
   },
   header: {
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f7f8fa',
     padding: 15,
     marginBottom: 15,
     borderRadius: 10,
@@ -105,8 +107,12 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 14,
-    color: '#007BFF',
-    textDecorationLine: 'underline'
+    color: '#ffffff',
+    textDecorationLine: 'none',
+    marginTop: 10,
+    backgroundColor: '#5aa88f',
+    padding: 10,
+    borderRadius: 50,
   }
 });
 

@@ -7,7 +7,7 @@ import EventDetailsPage from './Hack-cse-lerate'; // Import your event details p
 const eventsData = [
   {
     title: 'Hack-cse-lerate',
-    description: 'Join us for Hackathot, an electrifying 12-hour coding marathon from 8 AM to 8 PM at the Birla Auditorium and Media Center. Compete against top innovators for a prize pool of ₹10,000, with ₹5,000 for 1st place, ₹3,000 for 2nd, and ₹2,000 for 3rd. Unleash your creativity, solve real-world problems, and make your mark in the tech world!',
+    description: 'Join us for Hackathon, an electrifying 12-hour coding marathon from 8 AM to 8 PM at the Birla Auditorium and Media Center. Compete against top innovators for a prize pool of ₹10,000, with ₹5,000 for 1st place, ₹3,000 for 2nd, and ₹2,000 for 3rd. Unleash your creativity, solve real-world problems, and make your mark in the tech world!',
     date: 'March 29, 2025',
     icon: 'calendar',
     time: 'Timing is: 8am',
