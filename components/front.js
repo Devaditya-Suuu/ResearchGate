@@ -78,7 +78,7 @@ const Front = () => {
 
         {/* Links */}
         <TouchableOpacity style={styles.neuButton} onPress={() => navigation.navigate('Recent-Publications')}>
-          <Text style={styles.neuButtonText}>Recent Publications</Text>
+          <Text style={styles.neuButtonText}>Click here to see more publications</Text>
         </TouchableOpacity>
       </View>
       <Footer/>

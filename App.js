@@ -71,7 +71,6 @@ const App = () => {
             name="Recent-Publications"
             component={RecentPublications}  // This is your EventsPage component
         />
-
       </Stack.Navigator>
 
 
