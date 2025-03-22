@@ -10,6 +10,7 @@ import EventDetailsPage from "./components/Hack-cse-lerate";
 import ContactPage from './components/contact';
 import MemberCard from './components/Members'
 import RecentPublications from './components/RecentPublications';
+import LeadsPage from "./components/leades";
 // Create Stack Navigator
 const Stack = createStackNavigator();
 
@@ -70,6 +71,10 @@ const App = () => {
         <Stack.Screen
             name="Recent-Publications"
             component={RecentPublications}  // This is your EventsPage component
+        />
+        <Stack.Screen
+            name="Leads"
+            component={LeadsPage}  // This is your EventsPage component
         />
       </Stack.Navigator>
 

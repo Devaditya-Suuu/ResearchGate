@@ -39,6 +39,9 @@ const Header = () => {
           <TouchableOpacity style={styles.navLink} onPress={() => navigation.navigate('Members')}>
             <Text style={styles.navLinkText}>Members</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.navLink} onPress={() => navigation.navigate('Leads')}>
+            <Text style={styles.navLinkText}>Leads</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.navLink} onPress={() => navigation.navigate('Login')}>
             <Text style={styles.navLinkText}>Members Login</Text>
           </TouchableOpacity>
@@ -59,6 +62,9 @@ const Header = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.mobileMenuItem} onPress={() => navigation.navigate('Members')}>
             <Text style={styles.navLinkText}>Members</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.mobileMenuItem} onPress={() => navigation.navigate('Leads')}>
+            <Text style={styles.navLinkText}>Leads</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.mobileMenuItem} onPress={() => navigation.navigate('Login')}>
             <Text style={styles.navLinkText}>Members Login</Text>
