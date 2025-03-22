@@ -11,6 +11,7 @@ import ContactPage from './components/contact';
 import MemberCard from './components/Members'
 import RecentPublications from './components/RecentPublications';
 import LeadsPage from "./components/leades";
+import LoginPage from "./components/membersLogin";
 // Create Stack Navigator
 const Stack = createStackNavigator();
 
@@ -64,10 +65,6 @@ const App = () => {
           name="Members"
           component={MemberCard}  // This is your EventsPage component
         />
-        {/*<Stack.Screen*/}
-        {/*  name="Recent"*/}
-        {/*  component={MemberCard}  // This is your EventsPage component*/}
-        {/*/>*/}
         <Stack.Screen
             name="Recent-Publications"
             component={RecentPublications}  // This is your EventsPage component
@@ -75,6 +72,10 @@ const App = () => {
         <Stack.Screen
             name="Leads"
             component={LeadsPage}  // This is your EventsPage component
+        />
+        <Stack.Screen
+            name="Login"
+            component={LoginPage}  // This is your EventsPage component
         />
       </Stack.Navigator>
 
